@@ -23,8 +23,7 @@ commonLabels:
   app.kubernetes.io/name: echoserver
   app.kubernetes.io/part-of: echoes
 
-
-namespace: echoes
+namespace: echo-server
     
 replacements:
 - path: ./replace-servicename-references.yaml
