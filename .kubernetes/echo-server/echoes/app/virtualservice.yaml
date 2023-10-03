@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: echo-server
+  namespace: istio-system
+spec:
+  gateways:
+  - istio-system/zerotrust
+  - mesh
+  hosts: []
+  http:
+  - match:
+    - port: 443
+    name: echo-server
+    route:
+    - destination:
+        host: service.namespace.svc.cluster.local
+        port:
+          number: 8080

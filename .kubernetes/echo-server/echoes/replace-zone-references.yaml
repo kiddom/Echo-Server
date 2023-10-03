@@ -1,0 +1,24 @@
+- source:
+    kind: Service
+    fieldPath: metadata.name
+  targets:
+  - select:
+      kind: VirtualService
+    fieldPaths:
+    - spec.hosts.0
+    options:
+      create: true
+      delimiter: .
+      index: 0
+- source:
+    kind: Service
+    fieldPath: metadata.annotations.[kiddom.cloud/zone]
+  targets:
+  - select:
+      kind: VirtualService
+    fieldPaths:
+    - spec.hosts.0
+    options:
+      create: true
+      delimiter: .
+      index: 1

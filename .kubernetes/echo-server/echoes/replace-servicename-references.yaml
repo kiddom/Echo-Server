@@ -1,0 +1,30 @@
+- source:
+    kind: Service
+    fieldPath: metadata.name
+  targets:
+  - select:
+      kind: VirtualService
+    fieldPaths:
+    - spec.http.0.route.0.destination.host
+    options:
+      create: true
+      delimiter: .
+      index: 0
+  - select:
+      kind: VirtualService
+    fieldPaths:
+    - spec.http.0.name
+    options:
+      create: true
+- source:
+    kind: Service
+    fieldPath: metadata.namespace
+  targets:
+  - select:
+      kind: VirtualService
+    fieldPaths:
+    - spec.http.0.route.0.destination.host
+    options:
+      create: true
+      delimiter: .
+      index: 1
