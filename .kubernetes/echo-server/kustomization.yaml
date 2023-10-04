@@ -20,11 +20,11 @@ commonAnnotations:
   kiddom.cloud/zone:
 
 commonLabels:
-  app.kubernetes.io/name: echoserver
-  app.kubernetes.io/part-of: echoes
+  app.kubernetes.io/name: echo-server
+  app.kubernetes.io/part-of: echo-server
 
 namespace: echo-server
-    
+
 replacements:
 - path: ./replace-servicename-references.yaml
 - path: ./replace-zone-references.yaml
