@@ -5,7 +5,8 @@ metadata:
   name: echo-server
 spec:
   parentRefs:
-  - name: echo-server
+  - name: zerotrust
+    namespace: istio-system
   hostnames:
   - echo-server.pickles.pdx.dev.eng.kiddom.cloud
   rules:

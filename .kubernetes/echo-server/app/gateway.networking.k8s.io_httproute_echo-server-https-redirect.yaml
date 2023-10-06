@@ -5,7 +5,8 @@ metadata:
   name: echo-server-https-redirect
 spec:
   parentRefs:
-  - name: echo-server
+  - name: zerotrust
+    namespace: istio-system
   rules:
   - filters:
     - type: RequestRedirect

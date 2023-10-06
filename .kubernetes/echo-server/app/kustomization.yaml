@@ -5,6 +5,6 @@ resources:
 - ./configmap_echo-server.yaml
 - ./deployment_echo-server.yaml
 - ./service_echo-server.yaml
-- ./gateway.networking.k8s.io_gateway_echo-server.yaml
+#- ./gateway.networking.k8s.io_gateway_echo-server.yaml
 - ./gateway.networking.k8s.io_httproute_echo-server.yaml
 - ./gateway.networking.k8s.io_httproute_echo-server-https-redirect.yaml
