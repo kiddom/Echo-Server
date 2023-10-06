@@ -6,8 +6,6 @@ metadata:
 spec:
   parentRefs:
   - name: echo-server
-  hostnames:
-  - echo-server.pickles.pdx.dev.eng.kiddom.cloud
   rules:
   - filters:
     - type: RequestRedirect
