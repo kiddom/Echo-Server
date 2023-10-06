@@ -7,3 +7,5 @@ resources:
 - ./ingress.yaml
 - ./service.yaml
 - ./virtualservice.yaml
+- ./gateway.networking.k8s.io_gateway_echo-server.yaml
+- ./gateway.networking.k8s.io_httproute_echo-server.yaml
