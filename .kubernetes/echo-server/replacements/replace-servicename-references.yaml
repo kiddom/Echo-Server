@@ -3,19 +3,25 @@
     fieldPath: metadata.name
   targets:
   - select:
-      kind: VirtualService
+      kind: HTTPRoute
     fieldPaths:
-    - spec.http.0.route.0.destination.host
+    - spec.hostnames.*
     options:
       create: true
       delimiter: .
-      index: 0
+      index: -100
+- source:
+    kind: Service
+    fieldPath: metadata.labels.[kiddom.cloud/zone]
+  targets:
   - select:
-      kind: VirtualService
+      kind: HTTPRoute
     fieldPaths:
-    - spec.http.0.name
+    - spec.hostnames.*
     options:
       create: true
+      delimiter: .
+      index: 100
 - source:
     kind: Service
     fieldPath: metadata.namespace

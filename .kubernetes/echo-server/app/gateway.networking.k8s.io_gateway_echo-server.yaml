@@ -11,6 +11,12 @@ spec:
     hostname: '*.pickles.pdx.dev.eng.kiddom.cloud'
     protocol: HTTP
     port: 80
+    allowedRoutes:
+      namespaces:
+        from: Selector
+        selector:
+          matchLabels:
+            gateway.networking.k8s.io/name: zerotrust
   - name: https
     hostname: '*.pickles.pdx.dev.eng.kiddom.cloud'
     protocol: HTTPS
@@ -20,3 +26,9 @@ spec:
       - kind: Secret
         name: acme-tls
         namespace: istio-system
+    allowedRoutes:
+      namespaces:
+        from: Selector
+        selector:
+          matchLabels:
+            gateway.networking.k8s.io/name: zerotrust

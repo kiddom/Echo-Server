@@ -8,7 +8,7 @@ spec:
   - name: zerotrust
     namespace: istio-system
   hostnames:
-  - echo-server.pickles.pdx.dev.eng.kiddom.cloud
+  - echo-server
   rules:
   - backendRefs:
     - name: echo-server
