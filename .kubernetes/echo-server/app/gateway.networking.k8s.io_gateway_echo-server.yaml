@@ -7,11 +7,11 @@ spec:
   gatewayClassName: istio
   listeners:
   - name: http
-    hostname: echo-server.pickles.pdx.dev.eng.kiddom.cloud
+    hostname: '*.pickles.pdx.dev.eng.kiddom.cloud'
     protocol: HTTP
     port: 80
   - name: https
-    hostname: echo-server.pickles.pdx.dev.eng.kiddom.cloud
+    hostname: '*.pickles.pdx.dev.eng.kiddom.cloud'
     protocol: HTTPS
     port: 443
     tls:
