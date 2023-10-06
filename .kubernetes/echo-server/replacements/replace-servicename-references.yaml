@@ -5,7 +5,7 @@
   - select:
       kind: HTTPRoute
     fieldPaths:
-    - spec.hostnames.*
+    - spec.hostnames.0
     options:
       create: true
       delimiter: .
@@ -17,7 +17,7 @@
   - select:
       kind: HTTPRoute
     fieldPaths:
-    - spec.hostnames.*
+    - spec.hostnames.0
     options:
       create: true
       delimiter: .
