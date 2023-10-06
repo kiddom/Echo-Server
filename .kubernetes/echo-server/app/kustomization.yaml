@@ -2,10 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- ./configmap.yaml
-- ./deployment.yaml
-- ./ingress.yaml
-- ./service.yaml
-- ./virtualservice.yaml
+- ./configmap_echo-server.yaml
+- ./deployment_echo-server.yaml
+- ./service_echo-server.yaml
 - ./gateway.networking.k8s.io_gateway_echo-server.yaml
 - ./gateway.networking.k8s.io_httproute_echo-server.yaml
+- ./gateway.networking.k8s.io_httproute_echo-server-https-redirect.yamll

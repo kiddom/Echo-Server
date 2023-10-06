@@ -9,3 +9,12 @@ spec:
   - name: http
     protocol: HTTP
     port: 80
+  - name: https
+    hostname: echo-server.pickles.pdx.dev.eng.kiddom.cloud
+    protocol: HTTPS
+    port: 443
+    tls:
+      certificateRefs:
+      - kind: Secret
+        name: acme-tls
+        namespace: istio-system

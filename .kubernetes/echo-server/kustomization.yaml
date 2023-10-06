@@ -26,8 +26,8 @@ commonLabels:
 namespace: echo-server
 
 replacements:
-- path: ./replace-servicename-references.yaml
-- path: ./replace-zone-references.yaml
+- path: ./replacements/replace-servicename-references.yaml
+- path: ./replacements/replace-zone-references.yaml
 
 resources:
 - ./app
