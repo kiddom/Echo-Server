@@ -11,5 +11,6 @@ spec:
   rules:
   - filters:
     - type: RequestRedirect
-      scheme: https
-      statusCode: 301
+      requestRedirect:
+        scheme: https
+        statusCode: 301
